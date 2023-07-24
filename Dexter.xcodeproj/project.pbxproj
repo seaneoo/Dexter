@@ -15,6 +15,7 @@
 		1458F4752A6EE6F700BBBA18 /* PokemonSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1458F4742A6EE6F700BBBA18 /* PokemonSpriteView.swift */; };
 		14771D5F2A6E329F002C9B3B /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14771D5E2A6E329F002C9B3B /* Games.swift */; };
 		14AC22D82A6DF44200084CD4 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC22D72A6DF44200084CD4 /* ContentView-ViewModel.swift */; };
+		14BD05402A6F1F5800187832 /* Nameable-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD053F2A6F1F5800187832 /* Nameable-Ext.swift */; };
 		14C72B6D2A69D8E5003FA965 /* DexterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C72B6C2A69D8E5003FA965 /* DexterApp.swift */; };
 		14C72B6F2A69D8E5003FA965 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C72B6E2A69D8E5003FA965 /* ContentView.swift */; };
 		14C72B712A69D8E6003FA965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C72B702A69D8E6003FA965 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		1458F4742A6EE6F700BBBA18 /* PokemonSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSpriteView.swift; sourceTree = "<group>"; };
 		14771D5E2A6E329F002C9B3B /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		14AC22D72A6DF44200084CD4 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
+		14BD053F2A6F1F5800187832 /* Nameable-Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nameable-Ext.swift"; sourceTree = "<group>"; };
 		14C72B692A69D8E5003FA965 /* Dexter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dexter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C72B6C2A69D8E5003FA965 /* DexterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexterApp.swift; sourceTree = "<group>"; };
 		14C72B6E2A69D8E5003FA965 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		14BD053E2A6F1F5000187832 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				14BD053F2A6F1F5800187832 /* Nameable-Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		14C72B602A69D8E5003FA965 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 		14C72B6B2A69D8E5003FA965 /* Dexter */ = {
 			isa = PBXGroup;
 			children = (
+				14BD053E2A6F1F5000187832 /* Extensions */,
 				144F4BAA2A6EB75400C6176E /* ViewModels */,
 				144F4BA92A6EB74D00C6176E /* Views */,
 				14F1C56B2A6E0BB200F5D64B /* API */,
@@ -341,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14BD05402A6F1F5800187832 /* Nameable-Ext.swift in Sources */,
 				1458F4702A6EE12D00BBBA18 /* PokemonCellView.swift in Sources */,
 				14C72B6F2A69D8E5003FA965 /* ContentView.swift in Sources */,
 				14AC22D82A6DF44200084CD4 /* ContentView-ViewModel.swift in Sources */,

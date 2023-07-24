@@ -12,22 +12,18 @@ import Foundation
 struct Pokemon: Codable, Identifiable {
     var id: Int
     var name: String
-    var baseExperience: Int
-    var height: Int
-    var isDefault: Bool
-    var order: Int
-    var weight: Int
-    var abilities: [PokemonAbility]
-    var forms: [NamedAPIResource]
-//    var gameIndices
-    var heldItems: [PokemonHeldItem]
-    var locationAreaEncounters: String
-//    var moves
-    var pastTypes: [PokemonTypePast]
-//    var sprites
-    var species: NamedAPIResource
-//    var stats
-    var types: [PokemonType]
+    var baseExperience: Int?
+    var height: Int?
+    var isDefault: Bool?
+    var order: Int?
+    var weight: Int?
+    var abilities: [PokemonAbility]?
+    var forms: [NamedAPIResource]?
+    var heldItems: [PokemonHeldItem]?
+    var locationAreaEncounters: String?
+    var pastTypes: [PokemonTypePast]?
+    var species: NamedAPIResource?
+    var types: [PokemonType]?
 }
 
 struct PokemonAbility: Codable {
@@ -63,30 +59,30 @@ struct PokemonHeldItemVersion: Codable {
 
 // MARK: Pokemon Species endpoint
 
-struct PokemonSpecies: Codable, Identifiable {
+struct PokemonSpecies: Codable, Identifiable, Nameable {
     var id: Int
     var name: String
-    var order: Int
-    var genderRate: Int
-    var captureRate: Int
-    var baseHappiness: Int
-    var isBaby: Bool
-    var isLegendary: Bool
-    var isMythical: Bool
-    var hatchCounter: Int
-    var hasGenderDifferences: Bool
-    var formsSwitchable: Bool
-    var growthRate: NamedAPIResource
-    var pokedexNumbers: [PokemonSpeciesDexEntry]
-    var eggGroups: [NamedAPIResource]
-    var color: NamedAPIResource
-    var shape: NamedAPIResource
-    var evolvesFromSpecies: NamedAPIResource?
-    var evolutionChain: APIResource
-    var habitat: NamedAPIResource
-    var generation: NamedAPIResource
     var names: [Name]
-    var genera: [Genus]
+    var order: Int?
+    var genderRate: Int?
+    var captureRate: Int?
+    var baseHappiness: Int?
+    var isBaby: Bool?
+    var isLegendary: Bool?
+    var isMythical: Bool?
+    var hatchCounter: Int?
+    var hasGenderDifferences: Bool?
+    var formsSwitchable: Bool?
+    var growthRate: NamedAPIResource?
+    var pokedexNumbers: [PokemonSpeciesDexEntry]?
+    var eggGroups: [NamedAPIResource]?
+    var color: NamedAPIResource?
+    var shape: NamedAPIResource?
+    var evolvesFromSpecies: NamedAPIResource??
+    var evolutionChain: APIResource?
+    var habitat: NamedAPIResource?
+    var generation: NamedAPIResource?
+    var genera: [Genus]?
 }
 
 struct Genus: Codable {

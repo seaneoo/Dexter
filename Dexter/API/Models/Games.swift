@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Pokedex: Codable, Identifiable {
+struct Pokedex: Codable, Identifiable, Nameable {
     var id: Int
     var name: String
     var names: [Name]
-    var pokemonEntries: [PokemonEntry]
+    var pokemonEntries: [PokemonEntry]?
 }
 
 struct PokemonEntry: Codable {

@@ -7,7 +7,13 @@
 
 import Foundation
 
-struct Language: Codable {
+protocol Nameable {
+    var id: Int { get set }
+    var name: String { get set }
+    var names: [Name] { get set }
+}
+
+struct Language: Codable, Nameable {
     var id: Int
     var name: String
     var official: Bool
