@@ -5,7 +5,6 @@
 //  Created by Sean O'Connor on 7/20/23.
 //
 
-import CachedAsyncImage
 import SwiftUI
 
 struct ContentView: View {
@@ -36,11 +35,7 @@ struct ContentView: View {
             NavigationLink(destination: {
                 PokemonDetailsView(id: entry.entryNumber)
             }, label: {
-                CachedAsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(entry.entryNumber).png")) { image in
-                    image.resizable().aspectRatio(contentMode: .fit)
-                } placeholder: {
-                    ProgressView()
-                }
+                PokemonCellView(id: entry.entryNumber)
             })
             .frame(width: 150, height: 150)
         }
