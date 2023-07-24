@@ -10,6 +10,7 @@ import Foundation
 extension PokemonDetailsView {
     @MainActor class ViewModel: ObservableObject {
         @Published public var species: PokemonSpecies?
+        @Published public var pokemon: Pokemon?
 
         private var id: Int
 
@@ -17,7 +18,7 @@ extension PokemonDetailsView {
             self.id = id
         }
 
-        func fetchData() {
+        func fetchSpecies() {
             PokeAPI.shared.fetchPokemonSpecies(id: id) { [weak self] result in
                 switch result {
                 case let .success(data):
@@ -31,6 +32,27 @@ extension PokemonDetailsView {
                     }
                 }
             }
+        }
+
+        func fetchPokemon() {
+            PokeAPI.shared.fetchPokemon(id: id) { [weak self] result in
+                switch result {
+                case let .success(data):
+                    DispatchQueue.main.async {
+                        self?.pokemon = data
+                    }
+                case let .failure(error):
+                    DispatchQueue.main.async {
+                        self?.pokemon = nil
+                        print(String(describing: error))
+                    }
+                }
+            }
+        }
+
+        func fetchData() {
+            fetchSpecies()
+            fetchPokemon()
         }
     }
 }

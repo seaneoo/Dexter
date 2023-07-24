@@ -7,6 +7,60 @@
 
 import Foundation
 
+// MARK: Pokemon endpoint
+
+struct Pokemon: Codable, Identifiable {
+    var id: Int
+    var name: String
+    var baseExperience: Int
+    var height: Int
+    var isDefault: Bool
+    var order: Int
+    var weight: Int
+    var abilities: [PokemonAbility]
+    var forms: [NamedAPIResource]
+//    var gameIndices
+    var heldItems: [PokemonHeldItem]
+    var locationAreaEncounters: String
+//    var moves
+    var pastTypes: [PokemonTypePast]
+//    var sprites
+    var species: NamedAPIResource
+//    var stats
+    var types: [PokemonType]
+}
+
+struct PokemonAbility: Codable {
+    var isHidden: Bool
+    var slot: Int
+    var ability: NamedAPIResource
+}
+
+struct PokemonType: Codable {
+    var slot: Int
+    var type: NamedAPIResource
+}
+
+struct PokemonFormType: Codable {
+    var slot: Int
+    var type: NamedAPIResource
+}
+
+struct PokemonTypePast: Codable {
+    var generation: NamedAPIResource
+    var types: [PokemonType]
+}
+
+struct PokemonHeldItem: Codable {
+    var item: NamedAPIResource
+    var versionDetails: [PokemonHeldItemVersion]
+}
+
+struct PokemonHeldItemVersion: Codable {
+    var version: NamedAPIResource
+    var rarity: Int
+}
+
 // MARK: Pokemon Species endpoint
 
 struct PokemonSpecies: Codable, Identifiable {
