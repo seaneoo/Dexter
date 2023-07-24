@@ -33,21 +33,14 @@ struct ContentView: View {
     @ViewBuilder
     var dex: some View {
         ForEach(vm.entries, id: \.entryNumber) { entry in
-            HStack(spacing: 20) {
-                CachedAsyncImage(url: URL(string: "https://img.pokemondb.net/artwork/avif/\(entry.pokemonSpecies.name).avif")) { image in
-                    image.resizable()
-                        .aspectRatio(contentMode: .fit)
+            ZStack {
+                CachedAsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(entry.entryNumber).png")) { image in
+                    image.resizable().aspectRatio(contentMode: .fit)
                 } placeholder: {
                     ProgressView()
                 }
-                .frame(width: 100, height: 100)
-
-                Text(entry.pokemonSpecies.name)
-
-                Spacer()
             }
-            .frame(maxWidth: .infinity)
-            .padding()
+            .frame(width: 150, height: 150)
         }
     }
 

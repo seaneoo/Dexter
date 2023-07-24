@@ -85,6 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		144F4BA92A6EB74D00C6176E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14C72B6E2A69D8E5003FA965 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		144F4BAA2A6EB75400C6176E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				14AC22D72A6DF44200084CD4 /* ContentView-ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		14C72B602A69D8E5003FA965 = {
 			isa = PBXGroup;
 			children = (
@@ -108,10 +124,10 @@
 		14C72B6B2A69D8E5003FA965 /* Dexter */ = {
 			isa = PBXGroup;
 			children = (
+				144F4BAA2A6EB75400C6176E /* ViewModels */,
+				144F4BA92A6EB74D00C6176E /* Views */,
 				14F1C56B2A6E0BB200F5D64B /* API */,
 				14C72B702A69D8E6003FA965 /* Assets.xcassets */,
-				14AC22D72A6DF44200084CD4 /* ContentView-ViewModel.swift */,
-				14C72B6E2A69D8E5003FA965 /* ContentView.swift */,
 				14C72B6C2A69D8E5003FA965 /* DexterApp.swift */,
 				14C72B722A69D8E6003FA965 /* Preview Content */,
 			);
