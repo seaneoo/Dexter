@@ -27,7 +27,7 @@ struct PokemonSpecies: Codable, Identifiable {
     var eggGroups: [NamedAPIResource]
     var color: NamedAPIResource
     var shape: NamedAPIResource
-    var evolvesFromSpecies: NamedAPIResource
+    var evolvesFromSpecies: NamedAPIResource?
     var evolutionChain: APIResource
     var habitat: NamedAPIResource
     var generation: NamedAPIResource
