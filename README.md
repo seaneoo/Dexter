@@ -1,9 +1,10 @@
+<br/>
+
 <div align="center">
   <img src="https://github.com/seaneoo/Dexter/blob/main/docs/icon.png?raw=true" width="150"/>
   <br/>
   <br/>
   <p>A powerful Pokédex app for iOS.</p>
-  <br/>
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/seaneoo/Dexter"> <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/seaneoo/Dexter/main"> <img alt="GitHub" src="https://img.shields.io/github/license/seaneoo/Dexter">
 </div>
 
