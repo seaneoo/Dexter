@@ -24,7 +24,7 @@ struct PokemonSpecies: Codable, Identifiable {
     var formsSwitchable: Bool
     var growthRate: NamedAPIResource
     var pokedexNumbers: [PokemonSpeciesDexEntry]
-    var eggGroups: NamedAPIResource
+    var eggGroups: [NamedAPIResource]
     var color: NamedAPIResource
     var shape: NamedAPIResource
     var evolvesFromSpecies: NamedAPIResource
