@@ -18,4 +18,9 @@ class PokeAPI {
         let url = "https://pokeapi.co/api/v2/pokemon-species?offset=\(offset)&limit=\(limit)"
         api.perform(for: NamedAPIResourceList.self, from: url, completion: completion)
     }
+
+    func fetchPokedex(for name: String, completion: @escaping Completion<Pokedex>) {
+        let url = "https://pokeapi.co/api/v2/pokedex/\(name)"
+        api.perform(for: Pokedex.self, from: url, completion: completion)
+    }
 }

@@ -31,23 +31,19 @@ struct ContentView: View {
 
     @ViewBuilder
     var dex: some View {
-        ForEach(Array(zip(vm.items.indices, vm.items)), id: \.0) { index, item in
+        ForEach(vm.entries, id: \.entryNumber) { entry in
             ZStack(alignment: .center) {
                 Color.gray
 
                 HStack {
-                    Text("\(index + 1)")
+                    Text("\(entry.entryNumber)")
                         .foregroundColor(.white)
 
-                    Text(item.name)
+                    Text(entry.pokemonSpecies.name)
                         .foregroundColor(.white)
                 }.padding()
 
             }.frame(height: 100)
-        }
-
-        loading.task {
-            vm.fetchData()
         }
     }
 

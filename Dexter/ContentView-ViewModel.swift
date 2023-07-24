@@ -9,20 +9,16 @@ import Foundation
 
 extension ContentView {
     @MainActor class ViewModel: ObservableObject {
-        @Published public var data: NamedAPIResourceList?
-        @Published public var items = [NamedAPIResource]()
-
-        var page = 1
-        let limit = 20
+        @Published public var data: Pokedex?
+        @Published public var entries = [PokemonEntry]()
 
         func fetchData() {
-            PokeAPI.shared.fetchPokemonSpeciesList(offset: (page - 1) * limit, limit: limit) { [weak self] result in
+            PokeAPI.shared.fetchPokedex(for: "national") { [weak self] result in
                 switch result {
                 case let .success(data):
                     DispatchQueue.main.async {
                         self?.data = data
-                        self?.items += self?.data?.results ?? []
-                        self?.page += 1
+                        self?.entries += self?.data?.pokemonEntries ?? []
                     }
                 case let .failure(error):
                     DispatchQueue.main.async {
