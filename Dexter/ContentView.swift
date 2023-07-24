@@ -5,6 +5,7 @@
 //  Created by Sean O'Connor on 7/20/23.
 //
 
+import CachedAsyncImage
 import SwiftUI
 
 struct ContentView: View {
@@ -13,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                LazyVStack(alignment: .leading, spacing: 20) {
+                LazyVStack(alignment: .leading, spacing: 0) {
                     if vm.data != nil {
                         dex
                     } else {
@@ -32,18 +33,21 @@ struct ContentView: View {
     @ViewBuilder
     var dex: some View {
         ForEach(vm.entries, id: \.entryNumber) { entry in
-            ZStack(alignment: .center) {
-                Color.gray
+            HStack(spacing: 20) {
+                CachedAsyncImage(url: URL(string: "https://img.pokemondb.net/artwork/avif/\(entry.pokemonSpecies.name).avif")) { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: 100, height: 100)
 
-                HStack {
-                    Text("\(entry.entryNumber)")
-                        .foregroundColor(.white)
+                Text(entry.pokemonSpecies.name)
 
-                    Text(entry.pokemonSpecies.name)
-                        .foregroundColor(.white)
-                }.padding()
-
-            }.frame(height: 100)
+                Spacer()
+            }
+            .frame(maxWidth: .infinity)
+            .padding()
         }
     }
 
