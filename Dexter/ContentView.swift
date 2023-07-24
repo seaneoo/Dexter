@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var vm = ContentView.ViewModel()
+    @StateObject private var vm = ViewModel()
 
     var body: some View {
         NavigationStack {
-            VStack {
+            ScrollView {
+                LazyVStack(alignment: .leading, spacing: 0) {
+                    if let data = vm.data {
+                        ForEach(data.results, id: \.name) { item in
+                            Text(item.name)
+                        }
+                    } else {
+                        ProgressView()
+                    }
+                }
             }
             .navigationTitle("Dexter")
+            .padding([.horizontal])
+            .task {
+                vm.fetchData()
+            }
         }
     }
 }

@@ -15,6 +15,10 @@
 		14C72B7E2A69D8E6003FA965 /* DexterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C72B7D2A69D8E6003FA965 /* DexterTests.swift */; };
 		14C72B882A69D8E6003FA965 /* DexterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C72B872A69D8E6003FA965 /* DexterUITests.swift */; };
 		14C72B8A2A69D8E6003FA965 /* DexterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C72B892A69D8E6003FA965 /* DexterUITestsLaunchTests.swift */; };
+		14F1C56D2A6E0BBB00F5D64B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C56C2A6E0BBB00F5D64B /* APIService.swift */; };
+		14F1C5702A6E0CF900F5D64B /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C56F2A6E0CF900F5D64B /* Pagination.swift */; };
+		14F1C5722A6E0D8900F5D64B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C5712A6E0D8900F5D64B /* Utility.swift */; };
+		14F1C5742A6E0E1100F5D64B /* PokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C5732A6E0E1100F5D64B /* PokeAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		14C72B832A69D8E6003FA965 /* DexterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DexterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C72B872A69D8E6003FA965 /* DexterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexterUITests.swift; sourceTree = "<group>"; };
 		14C72B892A69D8E6003FA965 /* DexterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		14F1C56C2A6E0BBB00F5D64B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		14F1C56F2A6E0CF900F5D64B /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		14F1C5712A6E0D8900F5D64B /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		14F1C5732A6E0E1100F5D64B /* PokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 		14C72B6B2A69D8E5003FA965 /* Dexter */ = {
 			isa = PBXGroup;
 			children = (
+				14F1C56B2A6E0BB200F5D64B /* API */,
 				14C72B702A69D8E6003FA965 /* Assets.xcassets */,
 				14AC22D72A6DF44200084CD4 /* ContentView-ViewModel.swift */,
 				14C72B6E2A69D8E5003FA965 /* ContentView.swift */,
@@ -128,6 +137,25 @@
 				14C72B892A69D8E6003FA965 /* DexterUITestsLaunchTests.swift */,
 			);
 			path = DexterUITests;
+			sourceTree = "<group>";
+		};
+		14F1C56B2A6E0BB200F5D64B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				14F1C5732A6E0E1100F5D64B /* PokeAPI.swift */,
+				14F1C56E2A6E0CE500F5D64B /* Models */,
+				14F1C56C2A6E0BBB00F5D64B /* APIService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		14F1C56E2A6E0CE500F5D64B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14F1C56F2A6E0CF900F5D64B /* Pagination.swift */,
+				14F1C5712A6E0D8900F5D64B /* Utility.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +290,10 @@
 			files = (
 				14C72B6F2A69D8E5003FA965 /* ContentView.swift in Sources */,
 				14AC22D82A6DF44200084CD4 /* ContentView-ViewModel.swift in Sources */,
+				14F1C5742A6E0E1100F5D64B /* PokeAPI.swift in Sources */,
+				14F1C5722A6E0D8900F5D64B /* Utility.swift in Sources */,
+				14F1C5702A6E0CF900F5D64B /* Pagination.swift in Sources */,
+				14F1C56D2A6E0BBB00F5D64B /* APIService.swift in Sources */,
 				14C72B6D2A69D8E5003FA965 /* DexterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
