@@ -24,7 +24,7 @@ class APIService {
             }
 
             if let error = error {
-                completion(.failure(APIServiceError.response(error: error.localizedDescription)))
+                completion(.failure(APIServiceError.response(error: String(describing: error))))
                 return
             }
 
@@ -34,7 +34,7 @@ class APIService {
                     let decoded = try self.decoder.decode(T.self, from: data)
                     completion(.success(decoded))
                 } catch {
-                    completion(.failure(APIServiceError.decoding(error: error.localizedDescription)))
+                    completion(.failure(APIServiceError.decoding(error: String(describing: error))))
                 }
             }
         }
