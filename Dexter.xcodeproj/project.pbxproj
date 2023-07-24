@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140C80EF2A6EC6A700467998 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C80EE2A6EC6A700467998 /* Pokemon.swift */; };
 		14771D5F2A6E329F002C9B3B /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14771D5E2A6E329F002C9B3B /* Games.swift */; };
 		14AC22D82A6DF44200084CD4 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC22D72A6DF44200084CD4 /* ContentView-ViewModel.swift */; };
 		14C72B6D2A69D8E5003FA965 /* DexterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C72B6C2A69D8E5003FA965 /* DexterApp.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		140C80EE2A6EC6A700467998 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		14771D5E2A6E329F002C9B3B /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		14AC22D72A6DF44200084CD4 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
 		14C72B692A69D8E5003FA965 /* Dexter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dexter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 				14F1C56F2A6E0CF900F5D64B /* Pagination.swift */,
 				14F1C5712A6E0D8900F5D64B /* Utility.swift */,
 				14771D5E2A6E329F002C9B3B /* Games.swift */,
+				140C80EE2A6EC6A700467998 /* Pokemon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				14F1C5742A6E0E1100F5D64B /* PokeAPI.swift in Sources */,
 				14771D5F2A6E329F002C9B3B /* Games.swift in Sources */,
 				14F1C5722A6E0D8900F5D64B /* Utility.swift in Sources */,
+				140C80EF2A6EC6A700467998 /* Pokemon.swift in Sources */,
 				14F1C5702A6E0CF900F5D64B /* Pagination.swift in Sources */,
 				14F1C56D2A6E0BBB00F5D64B /* APIService.swift in Sources */,
 				14C72B6D2A69D8E5003FA965 /* DexterApp.swift in Sources */,
