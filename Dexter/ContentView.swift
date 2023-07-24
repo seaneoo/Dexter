@@ -13,13 +13,11 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                LazyVStack(alignment: .leading, spacing: 0) {
-                    if let data = vm.data {
-                        ForEach(data.results, id: \.name) { item in
-                            Text(item.name)
-                        }
+                LazyVStack(alignment: .leading, spacing: 20) {
+                    if vm.data != nil {
+                        dex
                     } else {
-                        ProgressView()
+                        loading
                     }
                 }
             }
@@ -29,6 +27,37 @@ struct ContentView: View {
                 vm.fetchData()
             }
         }
+    }
+
+    @ViewBuilder
+    var dex: some View {
+        ForEach(Array(zip(vm.items.indices, vm.items)), id: \.0) { index, item in
+            ZStack(alignment: .center) {
+                Color.gray
+
+                HStack {
+                    Text("\(index + 1)")
+                        .foregroundColor(.white)
+
+                    Text(item.name)
+                        .foregroundColor(.white)
+                }.padding()
+
+            }.frame(height: 100)
+        }
+
+        loading.task {
+            vm.fetchData()
+        }
+    }
+
+    @ViewBuilder
+    var loading: some View {
+        VStack(alignment: .center) {
+            ProgressView("Loading")
+        }
+        .frame(maxWidth: .infinity)
+        .padding()
     }
 }
 
