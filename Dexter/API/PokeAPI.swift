@@ -14,8 +14,8 @@ class PokeAPI {
 
     typealias Completion<T> = (Result<T, Error>) -> Void
 
-    func fetchPokemonSpeciesList(completion: @escaping Completion<NamedAPIResourceList>) {
-        let url = "https://pokeapi.co/api/v2/pokemon-species"
+    func fetchPokemonSpeciesList(offset: Int, limit: Int, completion: @escaping Completion<NamedAPIResourceList>) {
+        let url = "https://pokeapi.co/api/v2/pokemon-species?offset=\(offset)&limit=\(limit)"
         api.perform(for: NamedAPIResourceList.self, from: url, completion: completion)
     }
 }
