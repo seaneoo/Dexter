@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                LazyVStack(alignment: .leading, spacing: 0) {
+                LazyVStack(alignment: .center, spacing: 0) {
                     if vm.data != nil {
                         dex
                     } else {
@@ -33,13 +33,15 @@ struct ContentView: View {
     @ViewBuilder
     var dex: some View {
         ForEach(vm.entries, id: \.entryNumber) { entry in
-            ZStack {
+            NavigationLink(destination: {
+                PokemonDetailsView(id: entry.entryNumber)
+            }, label: {
                 CachedAsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(entry.entryNumber).png")) { image in
                     image.resizable().aspectRatio(contentMode: .fit)
                 } placeholder: {
                     ProgressView()
                 }
-            }
+            })
             .frame(width: 150, height: 150)
         }
     }
