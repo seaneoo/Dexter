@@ -8,6 +8,10 @@ Dexter is built with immense gratitude to the [PokeAPI](https://pokeapi.co/) dev
 
 - [CachedAsyncImage](https://github.com/lorenzofiamingo/swiftui-cached-async-image)
 
+## Contributions
+
+Contributions are always appreciated. If you have an idea on how to improve something or there is a feature I missed, by all means I am open to the help!
+
 ## License
 
 Dexter is distributed under the GPL version 3.0 license ([see LICENSE](LICENSE)). This means you are free to use, modify, and distribute the codebase in accordance with the GPL's terms and conditions.
