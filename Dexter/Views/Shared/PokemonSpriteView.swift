@@ -29,13 +29,9 @@ struct PokemonSpriteView: View {
                 image
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 200)
             } placeholder: {
                 ProgressView()
             }
-        } else {
-            Image(systemName: "x.circle.fill")
-                .foregroundColor(.red)
         }
     }
 }
