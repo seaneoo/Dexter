@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-// TODO: Temporary
-struct Cell: View {
-    let result: NamedAPIResource
-
-    var body: some View {
-        ZStack {
-            Color.red
-            Text(result.name)
-        }
-        .frame(height: 200)
-    }
-}
-
 struct DexView: View {
     @ObservedObject private var vm = ViewModel()
 
@@ -38,7 +25,7 @@ struct DexView: View {
         ScrollView {
             LazyVStack(spacing: 0) {
                 ForEach(vm.results, id: \.name) { result in
-                    Cell(result: result)
+                    DexCellView(name: result.name)
                         .task {
                             if result.name == vm.results.last?.name {
                                 vm.fetch()

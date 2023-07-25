@@ -15,8 +15,8 @@ class PokeAPI {
 
     typealias Completion<T> = (Result<T, Error>) -> Void
 
-    func fetchPokemonSpecies(id: Int, completion: @escaping Completion<PokemonSpecies>) {
-        let url = "\(endpoint)/pokemon-species/\(id)"
+    func fetchPokemonSpecies(name: String, completion: @escaping Completion<PokemonSpecies>) {
+        let url = "\(endpoint)/pokemon-species/\(name)"
         service.perform(for: PokemonSpecies.self, from: url, completion: completion)
     }
 
