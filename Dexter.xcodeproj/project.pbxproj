@@ -10,6 +10,8 @@
 		140C80EF2A6EC6A700467998 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C80EE2A6EC6A700467998 /* Pokemon.swift */; };
 		1458F4752A6EE6F700BBBA18 /* PokemonSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1458F4742A6EE6F700BBBA18 /* PokemonSpriteView.swift */; };
 		14771D5F2A6E329F002C9B3B /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14771D5E2A6E329F002C9B3B /* Games.swift */; };
+		14BB16992A6F4B21000F2A51 /* DexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB16982A6F4B21000F2A51 /* DexView.swift */; };
+		14BB169B2A6F4B32000F2A51 /* DexView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB169A2A6F4B32000F2A51 /* DexView+ViewModel.swift */; };
 		14BD05402A6F1F5800187832 /* Nameable-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD053F2A6F1F5800187832 /* Nameable-Ext.swift */; };
 		14BD05442A6F215A00187832 /* Pokemon+Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD05432A6F215A00187832 /* Pokemon+Stubs.swift */; };
 		14C72B6D2A69D8E5003FA965 /* DexterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C72B6C2A69D8E5003FA965 /* DexterApp.swift */; };
@@ -47,6 +49,8 @@
 		140C80EE2A6EC6A700467998 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		1458F4742A6EE6F700BBBA18 /* PokemonSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSpriteView.swift; sourceTree = "<group>"; };
 		14771D5E2A6E329F002C9B3B /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		14BB16982A6F4B21000F2A51 /* DexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexView.swift; sourceTree = "<group>"; };
+		14BB169A2A6F4B32000F2A51 /* DexView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DexView+ViewModel.swift"; sourceTree = "<group>"; };
 		14BD053F2A6F1F5800187832 /* Nameable-Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nameable-Ext.swift"; sourceTree = "<group>"; };
 		14BD05432A6F215A00187832 /* Pokemon+Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pokemon+Stubs.swift"; sourceTree = "<group>"; };
 		14C72B692A69D8E5003FA965 /* Dexter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dexter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,16 +98,10 @@
 		144F4BA92A6EB74D00C6176E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				14BB16972A6F4B1A000F2A51 /* Dex */,
 				1458F4732A6EE6EE00BBBA18 /* Shared */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		144F4BAA2A6EB75400C6176E /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		1458F4732A6EE6EE00BBBA18 /* Shared */ = {
@@ -112,6 +110,15 @@
 				1458F4742A6EE6F700BBBA18 /* PokemonSpriteView.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		14BB16972A6F4B1A000F2A51 /* Dex */ = {
+			isa = PBXGroup;
+			children = (
+				14BB16982A6F4B21000F2A51 /* DexView.swift */,
+				14BB169A2A6F4B32000F2A51 /* DexView+ViewModel.swift */,
+			);
+			path = Dex;
 			sourceTree = "<group>";
 		};
 		14BD053E2A6F1F5000187832 /* Extensions */ = {
@@ -159,7 +166,6 @@
 				14F1C56B2A6E0BB200F5D64B /* API */,
 				14BD053E2A6F1F5000187832 /* Extensions */,
 				14C72B722A69D8E6003FA965 /* Preview Content */,
-				144F4BAA2A6EB75400C6176E /* ViewModels */,
 				144F4BA92A6EB74D00C6176E /* Views */,
 			);
 			path = Dexter;
@@ -352,7 +358,9 @@
 				14C72B6F2A69D8E5003FA965 /* ContentView.swift in Sources */,
 				14BD05442A6F215A00187832 /* Pokemon+Stubs.swift in Sources */,
 				1458F4752A6EE6F700BBBA18 /* PokemonSpriteView.swift in Sources */,
+				14BB16992A6F4B21000F2A51 /* DexView.swift in Sources */,
 				14F1C5742A6E0E1100F5D64B /* PokeAPI.swift in Sources */,
+				14BB169B2A6F4B32000F2A51 /* DexView+ViewModel.swift in Sources */,
 				14771D5F2A6E329F002C9B3B /* Games.swift in Sources */,
 				14F1C5722A6E0D8900F5D64B /* Utility.swift in Sources */,
 				140C80EF2A6EC6A700467998 /* Pokemon.swift in Sources */,
