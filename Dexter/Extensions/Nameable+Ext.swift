@@ -8,8 +8,8 @@
 import Foundation
 
 extension Nameable {
-    func englishName() -> String {
-        if let item = names.first(where: { $0.language.name == "en" }) {
+    func translate(lang: LanguageCode = .en) -> String {
+        if let item = names.first(where: { $0.language.name == lang.rawValue }) {
             return item.name
         } else {
             return name

@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum LanguageCode: String {
+    case de, en, es, fr, it, ja, ja_hrkt = "ja-Hrkt", ko, roomaji, zh_hant = "zh-Hant", zhHans = "zh-Hans"
+}
+
 protocol Nameable {
     var id: Int { get set }
     var name: String { get set }
