@@ -10,27 +10,23 @@ import Foundation
 class PokeAPI {
     static let shared = PokeAPI()
 
-    private let api = APIService()
+    private let endpoint = "https://pokeapi.co/api/v2"
+    private let service = APIService()
 
     typealias Completion<T> = (Result<T, Error>) -> Void
 
     func fetchPokemonSpecies(id: Int, completion: @escaping Completion<PokemonSpecies>) {
-        let url = "https://pokeapi.co/api/v2/pokemon-species/\(id)"
-        api.perform(for: PokemonSpecies.self, from: url, completion: completion)
-    }
-
-    func fetchPokemon(id: Int, completion: @escaping Completion<Pokemon>) {
-        let url = "https://pokeapi.co/api/v2/pokemon/\(id)"
-        api.perform(for: Pokemon.self, from: url, completion: completion)
+        let url = "\(endpoint)/pokemon-species/\(id)"
+        service.perform(for: PokemonSpecies.self, from: url, completion: completion)
     }
 
     func fetchPokemonSpeciesList(offset: Int, limit: Int, completion: @escaping Completion<NamedAPIResourceList>) {
-        let url = "https://pokeapi.co/api/v2/pokemon-species?offset=\(offset)&limit=\(limit)"
-        api.perform(for: NamedAPIResourceList.self, from: url, completion: completion)
+        let url = "\(endpoint)/pokemon-species?offset=\(offset)&limit=\(limit)"
+        service.perform(for: NamedAPIResourceList.self, from: url, completion: completion)
     }
 
-    func fetchPokedex(for name: String, completion: @escaping Completion<Pokedex>) {
-        let url = "https://pokeapi.co/api/v2/pokedex/\(name)"
-        api.perform(for: Pokedex.self, from: url, completion: completion)
+    func fetchPokemon(id: Int, completion: @escaping Completion<Pokemon>) {
+        let url = "\(endpoint)/pokemon/\(id)"
+        service.perform(for: Pokemon.self, from: url, completion: completion)
     }
 }
