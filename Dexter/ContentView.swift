@@ -10,8 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            DexView()
-                .navigationTitle("Dexter")
+            ZStack(alignment: .top) {
+                TopNavView()
+
+                DexView()
+                    .padding(.top, 75)
+            }
         }
     }
 }
