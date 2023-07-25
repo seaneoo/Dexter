@@ -20,12 +20,17 @@ struct DexCellView: View {
     var body: some View {
         VStack {
             if let result = vm.result {
-                Text(result.translate(lang: .en))
+                HStack(spacing: 10) {
+                    Text(result.formattedId())
+                    Text(result.translate(lang: .en))
+
+                    Spacer()
+                }
             } else {
                 ProgressView()
             }
         }
-        .frame(height: 200)
+        .padding(.all)
         .task {
             vm.fetch()
         }
