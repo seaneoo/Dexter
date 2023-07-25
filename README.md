@@ -5,7 +5,10 @@
   <br/>
   <br/>
   <p>A powerful Pokédex app for iOS.</p>
-  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/seaneoo/Dexter"> <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/seaneoo/Dexter/main"> <img alt="GitHub" src="https://img.shields.io/github/license/seaneoo/Dexter">
+  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/seaneoo/Dexter?logo=github"> <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/seaneoo/Dexter/main?logo=github"> <img alt="GitHub" src="https://img.shields.io/github/license/seaneoo/Dexter">
+  <br/>
+  <a href="https://mastodon.social/@dexterapp"><img alt="Mastodon Follow" src="https://img.shields.io/mastodon/follow/110771056430504940?style=flat&logo=mastodon&color=%2397c803">
+</a> <a href="https://lemm.ee/c/dexterapp"><img alt="Lemmy" src="https://img.shields.io/lemmy/dexterapp%40lemm.ee?logo=lemmy&label=dexterapp%40lemm.ee&color=%2397c803"></a>
 </div>
 
 ## Acknowledgments
