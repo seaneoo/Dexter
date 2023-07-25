@@ -21,6 +21,9 @@ struct DexCellView: View {
         VStack {
             if let result = vm.result {
                 HStack(spacing: 10) {
+                    PokemonSpriteView(id: result.id)
+                        .frame(height: 50)
+
                     Text(result.formattedId())
                     Text(result.translate(lang: .en))
 

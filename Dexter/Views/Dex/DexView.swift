@@ -25,13 +25,13 @@ struct DexView: View {
         ScrollView {
             LazyVStack(spacing: 0) {
                 ForEach(vm.results, id: \.name) { result in
-                    Divider()
                     DexCellView(name: result.name)
                         .task {
                             if result.name == vm.results.last?.name {
                                 vm.fetch()
                             }
                         }
+                    Divider()
                 }
             }
         }
