@@ -12,7 +12,7 @@
 		14771D5F2A6E329F002C9B3B /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14771D5E2A6E329F002C9B3B /* Games.swift */; };
 		14BB16992A6F4B21000F2A51 /* DexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB16982A6F4B21000F2A51 /* DexView.swift */; };
 		14BB169B2A6F4B32000F2A51 /* DexView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB169A2A6F4B32000F2A51 /* DexView+ViewModel.swift */; };
-		14BD05402A6F1F5800187832 /* Nameable-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD053F2A6F1F5800187832 /* Nameable-Ext.swift */; };
+		14BD05402A6F1F5800187832 /* Nameable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD053F2A6F1F5800187832 /* Nameable+Ext.swift */; };
 		14BD05442A6F215A00187832 /* Pokemon+Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD05432A6F215A00187832 /* Pokemon+Stubs.swift */; };
 		14C72B6D2A69D8E5003FA965 /* DexterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C72B6C2A69D8E5003FA965 /* DexterApp.swift */; };
 		14C72B6F2A69D8E5003FA965 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C72B6E2A69D8E5003FA965 /* ContentView.swift */; };
@@ -51,7 +51,7 @@
 		14771D5E2A6E329F002C9B3B /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		14BB16982A6F4B21000F2A51 /* DexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexView.swift; sourceTree = "<group>"; };
 		14BB169A2A6F4B32000F2A51 /* DexView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DexView+ViewModel.swift"; sourceTree = "<group>"; };
-		14BD053F2A6F1F5800187832 /* Nameable-Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nameable-Ext.swift"; sourceTree = "<group>"; };
+		14BD053F2A6F1F5800187832 /* Nameable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nameable+Ext.swift"; sourceTree = "<group>"; };
 		14BD05432A6F215A00187832 /* Pokemon+Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pokemon+Stubs.swift"; sourceTree = "<group>"; };
 		14C72B692A69D8E5003FA965 /* Dexter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dexter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C72B6C2A69D8E5003FA965 /* DexterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexterApp.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		14BD053E2A6F1F5000187832 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				14BD053F2A6F1F5800187832 /* Nameable-Ext.swift */,
+				14BD053F2A6F1F5800187832 /* Nameable+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -354,7 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14BD05402A6F1F5800187832 /* Nameable-Ext.swift in Sources */,
+				14BD05402A6F1F5800187832 /* Nameable+Ext.swift in Sources */,
 				14C72B6F2A69D8E5003FA965 /* ContentView.swift in Sources */,
 				14BD05442A6F215A00187832 /* Pokemon+Stubs.swift in Sources */,
 				1458F4752A6EE6F700BBBA18 /* PokemonSpriteView.swift in Sources */,

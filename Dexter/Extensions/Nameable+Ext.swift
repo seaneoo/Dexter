@@ -1,5 +1,5 @@
 //
-//  Nameable-Ext.swift
+//  Nameable+Ext.swift
 //  Dexter
 //
 //  Created by Sean O'Connor on 7/24/23.
