@@ -31,10 +31,10 @@ struct DexView: View {
                                 vm.fetch()
                             }
                         }
-                    Divider()
                 }
             }
         }
+        .background(Color("SecondaryBackground"))
     }
 }
 

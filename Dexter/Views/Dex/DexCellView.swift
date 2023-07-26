@@ -34,6 +34,8 @@ struct DexCellView: View {
             }
         }
         .padding(.all)
+        .frame(maxWidth: .infinity)
+        .background(Color("Background"))
         .task {
             vm.fetch()
         }
