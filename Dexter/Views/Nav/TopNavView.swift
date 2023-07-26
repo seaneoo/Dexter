@@ -31,6 +31,21 @@ struct TopNavView: View {
                 }
             }
 
+            // GO TO SEARCH VIEW
+            NavigationLink {
+                Text("Search") // TODO:
+            } label: {
+                ZStack {
+                    Circle()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.blue)
+
+                    Image(systemName: "magnifyingglass")
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.white)
+                }
+            }
+
             // GO TO SETTINGS VIEW
             NavigationLink {
                 Text("Settings") // TODO:
