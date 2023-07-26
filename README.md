@@ -11,6 +11,12 @@
 </a> <a href="https://lemm.ee/c/dexterapp"><img alt="Lemmy" src="https://img.shields.io/lemmy/dexterapp%40lemm.ee?logo=lemmy&label=dexterapp%40lemm.ee&color=%2397c803"></a>
 </div>
 
+## Screenshots
+
+| ![](https://files.catbox.moe/bruor6.png) | ![](https://files.catbox.moe/d2g6hm.png) | ![](https://files.catbox.moe/d2g6hm.png)
+|:--:|:--:|:--:| 
+| *Home (Dex) view* | *???* | *???* |
+
 ## Acknowledgments
 
 Dexter is built with immense gratitude to the [PokeAPI](https://pokeapi.co/) developers for providing an exceptional Pokémon data resource, making this app possible. Please consider supporting the team behind PokeAPI through their Open Collective page (https://opencollective.com/pokeapi).
