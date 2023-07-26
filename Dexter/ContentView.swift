@@ -10,11 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            ZStack(alignment: .top) {
+            VStack(spacing: 0) {
                 TopNavView()
 
-                DexView()
-                    .padding(.top, 75)
+                TabView {
+                    DexView()
+                        .tabItem {
+                            Label("Dex", systemImage: "scroll")
+                        }
+                }
             }
         }
     }

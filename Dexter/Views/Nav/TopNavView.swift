@@ -9,15 +9,16 @@ import SwiftUI
 
 struct TopNavView: View {
     var body: some View {
-        HStack {
+        HStack(spacing: 10) {
             Text("Dexter")
                 .font(.largeTitle)
                 .fontWeight(.black)
 
             Spacer()
 
+            // SELECT GAME VERSION
             Menu {
-                // TODO: open game selector
+                // TODO:
             } label: {
                 ZStack {
                     Circle()
@@ -30,8 +31,9 @@ struct TopNavView: View {
                 }
             }
 
+            // GO TO SETTINGS VIEW
             NavigationLink {
-                Text("Settings") // TODO: make settings view
+                Text("Settings") // TODO:
             } label: {
                 ZStack {
                     Circle()
@@ -45,9 +47,9 @@ struct TopNavView: View {
             }
         }
         .padding(.horizontal)
-        .padding(.vertical, 5)
-        .frame(height: 75)
+        .padding(.bottom, 5)
         .background(.ultraThinMaterial)
+        .overlay(Divider(), alignment: .bottom)
     }
 }
 
