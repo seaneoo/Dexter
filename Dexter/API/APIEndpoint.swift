@@ -8,6 +8,17 @@
 import Foundation
 
 enum APIEndpoint: String {
-    case pokemonSpecies = "pokemon-species",
-         pokemon
+    case generation,
+         pokedex,
+         version,
+         item,
+         location,
+         machine,
+         move,
+         ability,
+         nature,
+         pokemonSpecies = "pokemon-species",
+         pokemon,
+         stat,
+         type
 }
