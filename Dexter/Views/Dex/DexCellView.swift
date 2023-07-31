@@ -19,21 +19,32 @@ struct DexCellView: View {
 
     var body: some View {
         VStack {
-            if let result = vm.result {
-                HStack(spacing: 10) {
-                    PokemonSpriteView(id: result.id)
-                        .frame(height: 50)
+            if let species = vm.species, let pokemon = vm.pokemon {
+                ZStack {
+                    if let types = pokemon.types {
+                        HStack(spacing: 0) {
+                            ForEach(types, id: \.slot) { type in
+                                PkmnTypeColors(rawValue: type.type.name)?.color
+                            }
+                        }
+                    }
 
-                    Text(result.formattedId())
-                    Text(result.translate(lang: .en))
+                    HStack(spacing: 10) {
+                        PokemonSpriteView(id: species.id)
+                            .frame(height: 50)
 
-                    Spacer()
+                        Text(species.formattedId())
+                        Text(species.translate(lang: .en))
+
+                        Spacer()
+                    }
+                    .padding(.all)
                 }
             } else {
                 ProgressView()
+                    .padding(.all)
             }
         }
-        .padding(.all)
         .frame(maxWidth: .infinity)
         .background(Color("Background"))
         .task {
@@ -44,6 +55,6 @@ struct DexCellView: View {
 
 struct DexCellView_Previews: PreviewProvider {
     static var previews: some View {
-        DexCellView(name: "eevee")
+        DexCellView(name: "dragonite")
     }
 }
