@@ -18,7 +18,7 @@ extension DexCellView {
         }
 
         func fetch() {
-            PokeAPI.shared.fetchPokemonSpecies(name: name) { [weak self] result in
+            PokeAPI.shared.fetchResource(endpoint: .pokemonSpecies, slug: name) { [weak self] (result: Result<PokemonSpecies, Error>) in
                 switch result {
                 case let .success(data):
                     DispatchQueue.main.async {

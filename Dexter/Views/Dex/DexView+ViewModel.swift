@@ -25,7 +25,7 @@ extension DexView {
 
             loading = true
 
-            PokeAPI.shared.fetchPokemonSpeciesList(offset: (page - 1) * limit, limit: limit) { [weak self] result in
+            PokeAPI.shared.fetchResourceList(endpoint: .pokemonSpecies, offset: (page - 1) * limit, limit: limit) { [weak self] result in
                 switch result {
                 case let .success(data):
                     DispatchQueue.main.async {
