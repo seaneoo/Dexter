@@ -10,7 +10,6 @@ import Foundation
 extension DexCellView {
     @MainActor final class ViewModel: ObservableObject {
         @Published var species: PkmnPokemonSpecies?
-        @Published var pokemon: PkmnPokemon?
 
         private var name: String
 
@@ -24,17 +23,6 @@ extension DexCellView {
                 case let .success(data):
                     DispatchQueue.main.async {
                         self?.species = data
-                    }
-                case let .failure(error):
-                    print(String(describing: error))
-                }
-            }
-
-            PokeAPI.shared.fetchResource(endpoint: .pokemon, slug: name) { [weak self] (result: Result<PkmnPokemon, Error>) in
-                switch result {
-                case let .success(data):
-                    DispatchQueue.main.async {
-                        self?.pokemon = data
                     }
                 case let .failure(error):
                     print(String(describing: error))
