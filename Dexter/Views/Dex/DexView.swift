@@ -25,12 +25,17 @@ struct DexView: View {
         ScrollView {
             LazyVStack(spacing: 0) {
                 ForEach(vm.results, id: \.name) { result in
-                    DexCellView(name: result.name)
-                        .task {
-                            if result.name == vm.results.last?.name {
-                                vm.fetch()
+                    NavigationLink {
+                        PokemonView(name: result.name)
+                    } label: {
+                        DexCellView(name: result.name)
+                            .task {
+                                if result.name == vm.results.last?.name {
+                                    vm.fetch()
+                                }
                             }
-                        }
+                    }
+                    .foregroundColor(.primary)
                 }
             }
         }
