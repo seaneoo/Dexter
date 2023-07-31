@@ -7,30 +7,30 @@
 
 import Foundation
 
-extension PokemonSpecies {
+extension PkmnPokemonSpecies {
     static func stub() -> Self {
-        PokemonSpecies(id: 133,
-                       name: "eevee",
-                       names: [
-                           Name(name: "イーブイ", language: NamedAPIResource(name: "ja-Hrkt", url: "")),
-                           Name(name: "Eevee", language: NamedAPIResource(name: "en", url: "")),
-                       ],
-                       varieties: [
-                           PokemonSpeciesVariety(isDefault: true, pokemon: NamedAPIResource(name: "eevee", url: "")),
-                           PokemonSpeciesVariety(isDefault: false, pokemon: NamedAPIResource(name: "eevee-starter", url: "")),
-                           PokemonSpeciesVariety(isDefault: false, pokemon: NamedAPIResource(name: "eevee-gmax", url: "")),
-                       ])
+        PkmnPokemonSpecies(id: 133,
+                           name: "eevee",
+                           names: [
+                               PkmnName(name: "イーブイ", language: PkmnNamedAPIResource(name: "ja-Hrkt", url: "")),
+                               PkmnName(name: "Eevee", language: PkmnNamedAPIResource(name: "en", url: "")),
+                           ],
+                           varieties: [
+                               PkmnPokemonSpeciesVariety(isDefault: true, pokemon: PkmnNamedAPIResource(name: "eevee", url: "")),
+                               PkmnPokemonSpeciesVariety(isDefault: false, pokemon: PkmnNamedAPIResource(name: "eevee-starter", url: "")),
+                               PkmnPokemonSpeciesVariety(isDefault: false, pokemon: PkmnNamedAPIResource(name: "eevee-gmax", url: "")),
+                           ])
     }
 }
 
-extension Pokemon {
+extension PkmnPokemon {
     static func stub() -> Self {
-        Pokemon(id: 6,
-                name: "charizard",
-                species: NamedAPIResource(name: "charizard", url: ""),
-                types: [
-                    PokemonType(slot: 1, type: NamedAPIResource(name: "fire", url: "")),
-                    PokemonType(slot: 2, type: NamedAPIResource(name: "flying", url: "")),
-                ])
+        PkmnPokemon(id: 6,
+                    name: "charizard",
+                    species: PkmnNamedAPIResource(name: "charizard", url: ""),
+                    types: [
+                        PkmnPokemonType(slot: 1, type: PkmnNamedAPIResource(name: "fire", url: "")),
+                        PkmnPokemonType(slot: 2, type: PkmnNamedAPIResource(name: "flying", url: "")),
+                    ])
     }
 }

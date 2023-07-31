@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: Pokemon endpoint
 
-struct Pokemon: Codable, Identifiable {
+struct PkmnPokemon: Codable, Identifiable {
     var id: Int
     var name: String
     var baseExperience: Int?
@@ -17,68 +17,68 @@ struct Pokemon: Codable, Identifiable {
     var isDefault: Bool?
     var order: Int?
     var weight: Int?
-    var abilities: [PokemonAbility]?
-    var forms: [NamedAPIResource]?
+    var abilities: [PkmnPokemonAbility]?
+    var forms: [PkmnNamedAPIResource]?
 //    var gameIndices: [Any]?
-    var heldItems: [PokemonHeldItem]?
+    var heldItems: [PkmnPokemonHeldItem]?
     var locationAreaEncounters: String?
-    var moves: [PokemonMove]?
-    var pastTypes: [PokemonTypePast]?
-    var sprites: PokemonSprites?
-    var species: NamedAPIResource?
-    var stats: [PokemonStat]?
-    var types: [PokemonType]?
+    var moves: [PkmnPokemonMove]?
+    var pastTypes: [PkmnPokemonTypePast]?
+    var sprites: PkmnPokemonSprites?
+    var species: PkmnNamedAPIResource?
+    var stats: [PkmnPokemonStat]?
+    var types: [PkmnPokemonType]?
 }
 
-struct PokemonAbility: Codable {
+struct PkmnPokemonAbility: Codable {
     var isHidden: Bool
     var slot: Int
-    var ability: NamedAPIResource
+    var ability: PkmnNamedAPIResource
 }
 
-struct PokemonType: Codable {
+struct PkmnPokemonType: Codable {
     var slot: Int
-    var type: NamedAPIResource
+    var type: PkmnNamedAPIResource
 }
 
-struct PokemonFormType: Codable {
+struct PkmnPokemonFormType: Codable {
     var slot: Int
-    var type: NamedAPIResource
+    var type: PkmnNamedAPIResource
 }
 
-struct PokemonTypePast: Codable {
-    var generation: NamedAPIResource
-    var types: [PokemonType]
+struct PkmnPokemonTypePast: Codable {
+    var generation: PkmnNamedAPIResource
+    var types: [PkmnPokemonType]
 }
 
-struct PokemonHeldItem: Codable {
-    var item: NamedAPIResource
-    var versionDetails: [PokemonHeldItemVersion]
+struct PkmnPokemonHeldItem: Codable {
+    var item: PkmnNamedAPIResource
+    var versionDetails: [PkmnPokemonHeldItemVersion]
 }
 
-struct PokemonHeldItemVersion: Codable {
-    var version: NamedAPIResource
+struct PkmnPokemonHeldItemVersion: Codable {
+    var version: PkmnNamedAPIResource
     var rarity: Int
 }
 
-struct PokemonMove: Codable {
-    var move: NamedAPIResource
-    var versionGroupDetails: [PokemonMoveVersion]
+struct PkmnPokemonMove: Codable {
+    var move: PkmnNamedAPIResource
+    var versionGroupDetails: [PkmnPokemonMoveVersion]
 }
 
-struct PokemonMoveVersion: Codable {
-    var moveLearnMethod: NamedAPIResource
-    var versionGroup: NamedAPIResource
+struct PkmnPokemonMoveVersion: Codable {
+    var moveLearnMethod: PkmnNamedAPIResource
+    var versionGroup: PkmnNamedAPIResource
     var levelLearnedAt: Int
 }
 
-struct PokemonStat: Codable {
-    var stat: NamedAPIResource
+struct PkmnPokemonStat: Codable {
+    var stat: PkmnNamedAPIResource
     var effort: Int
     var baseStat: Int
 }
 
-struct PokemonSprites: Codable {
+struct PkmnPokemonSprites: Codable {
     var frontDefault: String
     var frontShiny: String
     var frontFemale: String
@@ -91,7 +91,7 @@ struct PokemonSprites: Codable {
 
 // MARK: Pokemon Species endpoint
 
-struct PokemonSpecies: Codable, Identifiable, Nameable {
+struct PkmnPokemonSpecies: Codable, Identifiable, Nameable {
     var id: Int
     var name: String
     var order: Int?
@@ -104,40 +104,40 @@ struct PokemonSpecies: Codable, Identifiable, Nameable {
     var hatchCounter: Int?
     var hasGenderDifferences: Bool?
     var formsSwitchable: Bool?
-    var growthRate: NamedAPIResource?
-    var pokedexNumbers: [PokemonSpeciesDexEntry]?
-    var eggGroups: [NamedAPIResource]?
-    var color: NamedAPIResource?
-    var shape: NamedAPIResource?
-    var evolvesFromSpecies: NamedAPIResource??
-    var evolutionChain: APIResource?
-    var habitat: NamedAPIResource?
-    var generation: NamedAPIResource?
-    var names: [Name]
-    var palParkEncounters: [PalParkEncounterArea]?
-//    var flavorTextEntries: [FlavorText]?
-//    var formDescriptions: [Description]?
-    var genera: [Genus]?
-    var varieties: [PokemonSpeciesVariety]?
+    var growthRate: PkmnNamedAPIResource?
+    var pokedexNumbers: [PkmnPokemonSpeciesDexEntry]?
+    var eggGroups: [PkmnNamedAPIResource]?
+    var color: PkmnNamedAPIResource?
+    var shape: PkmnNamedAPIResource?
+    var evolvesFromSpecies: PkmnNamedAPIResource??
+    var evolutionChain: PkmnAPIResource?
+    var habitat: PkmnNamedAPIResource?
+    var generation: PkmnNamedAPIResource?
+    var names: [PkmnName]
+    var palParkEncounters: [PkmnPalParkEncounterArea]?
+//    var flavorTextEntries: [PkmnFlavorText]?
+//    var formDescriptions: [PkmnDescription]?
+    var genera: [PkmnGenus]?
+    var varieties: [PkmnPokemonSpeciesVariety]?
 }
 
-struct Genus: Codable {
+struct PkmnGenus: Codable {
     var genus: String
-    var language: NamedAPIResource
+    var language: PkmnNamedAPIResource
 }
 
-struct PokemonSpeciesDexEntry: Codable {
+struct PkmnPokemonSpeciesDexEntry: Codable {
     var entryNumber: Int
-    var pokedex: NamedAPIResource
+    var pokedex: PkmnNamedAPIResource
 }
 
-struct PalParkEncounterArea: Codable {
+struct PkmnPalParkEncounterArea: Codable {
     var baseScore: Int
     var rate: Int
-    var area: NamedAPIResource
+    var area: PkmnNamedAPIResource
 }
 
-struct PokemonSpeciesVariety: Codable {
+struct PkmnPokemonSpeciesVariety: Codable {
     var isDefault: Bool
-    var pokemon: NamedAPIResource
+    var pokemon: PkmnNamedAPIResource
 }

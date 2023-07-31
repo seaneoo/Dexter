@@ -17,13 +17,13 @@ extension FormattableId {
     }
 }
 
-extension PokemonSpecies: FormattableId {
+extension PkmnPokemonSpecies: FormattableId {
     func formattedId() -> String {
         formattedId(for: id)
     }
 }
 
-extension Pokemon: FormattableId {
+extension PkmnPokemon: FormattableId {
     func formattedId() -> String {
         formattedId(for: id)
     }

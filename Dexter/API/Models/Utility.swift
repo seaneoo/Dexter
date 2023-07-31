@@ -14,28 +14,28 @@ enum LanguageCode: String {
 protocol Nameable {
     var id: Int { get set }
     var name: String { get set }
-    var names: [Name] { get set }
+    var names: [PkmnName] { get set }
 }
 
-struct Language: Codable, Nameable {
+struct PkmnLanguage: Codable, Nameable {
     var id: Int
     var name: String
     var official: Bool
     var iso639: String
     var iso3166: String
-    var names: [Name]
+    var names: [PkmnName]
 }
 
-struct APIResource: Codable {
+struct PkmnAPIResource: Codable {
     var url: String
 }
 
-struct Name: Codable {
+struct PkmnName: Codable {
     var name: String
-    var language: NamedAPIResource
+    var language: PkmnNamedAPIResource
 }
 
-struct NamedAPIResource: Codable {
+struct PkmnNamedAPIResource: Codable {
     var name: String
     var url: String
 }

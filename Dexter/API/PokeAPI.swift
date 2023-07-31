@@ -15,9 +15,9 @@ class PokeAPI {
 
     typealias Completion<T> = (Result<T, Error>) -> Void
 
-    func fetchResourceList(endpoint: APIEndpoint, offset: Int, limit: Int, completion: @escaping Completion<NamedAPIResourceList>) {
+    func fetchResourceList(endpoint: APIEndpoint, offset: Int, limit: Int, completion: @escaping Completion<PkmnNamedAPIResourceList>) {
         let url = "\(apiBaseUrl)/\(endpoint.rawValue)?offset=\(offset)&limit=\(limit)"
-        service.perform(for: NamedAPIResourceList.self, from: url, completion: completion)
+        service.perform(for: PkmnNamedAPIResourceList.self, from: url, completion: completion)
     }
 
     func fetchResource<T: Decodable>(endpoint: APIEndpoint, slug: String, completion: @escaping Completion<T>) {

@@ -9,7 +9,7 @@ import Foundation
 
 extension DexCellView {
     @MainActor final class ViewModel: ObservableObject {
-        @Published var result: PokemonSpecies?
+        @Published var result: PkmnPokemonSpecies?
 
         private var name: String
 
@@ -18,7 +18,7 @@ extension DexCellView {
         }
 
         func fetch() {
-            PokeAPI.shared.fetchResource(endpoint: .pokemonSpecies, slug: name) { [weak self] (result: Result<PokemonSpecies, Error>) in
+            PokeAPI.shared.fetchResource(endpoint: .pokemonSpecies, slug: name) { [weak self] (result: Result<PkmnPokemonSpecies, Error>) in
                 switch result {
                 case let .success(data):
                     DispatchQueue.main.async {

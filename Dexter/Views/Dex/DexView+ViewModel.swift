@@ -9,7 +9,7 @@ import Foundation
 
 extension DexView {
     @MainActor final class ViewModel: ObservableObject {
-        @Published var results = [NamedAPIResource]()
+        @Published var results = [PkmnNamedAPIResource]()
         @Published var loading = false
 
         private var page: Int
