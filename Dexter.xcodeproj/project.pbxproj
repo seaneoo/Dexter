@@ -32,7 +32,6 @@
 		14F1C5702A6E0CF900F5D64B /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C56F2A6E0CF900F5D64B /* Pagination.swift */; };
 		14F1C5722A6E0D8900F5D64B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C5712A6E0D8900F5D64B /* Utility.swift */; };
 		14F1C5742A6E0E1100F5D64B /* PokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1C5732A6E0E1100F5D64B /* PokeAPI.swift */; };
-		14FD1E112A78383A001DCCAC /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD1E102A78383A001DCCAC /* Color+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +79,6 @@
 		14F1C56F2A6E0CF900F5D64B /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		14F1C5712A6E0D8900F5D64B /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		14F1C5732A6E0E1100F5D64B /* PokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPI.swift; sourceTree = "<group>"; };
-		14FD1E102A78383A001DCCAC /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +141,6 @@
 			children = (
 				14BD053F2A6F1F5800187832 /* Nameable+Ext.swift */,
 				144AA80C2A6F7A71009F5ACF /* PkmnPokemon+Ext.swift */,
-				14FD1E102A78383A001DCCAC /* Color+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -392,7 +389,6 @@
 				14BD05442A6F215A00187832 /* Pokemon+Stubs.swift in Sources */,
 				1458F4752A6EE6F700BBBA18 /* PokemonSpriteView.swift in Sources */,
 				145277DD2A6F5D9300F0F02D /* DexCellView.swift in Sources */,
-				14FD1E112A78383A001DCCAC /* Color+Ext.swift in Sources */,
 				14BB16992A6F4B21000F2A51 /* DexView.swift in Sources */,
 				14F1C5742A6E0E1100F5D64B /* PokeAPI.swift in Sources */,
 				14BB169B2A6F4B32000F2A51 /* DexView+ViewModel.swift in Sources */,
