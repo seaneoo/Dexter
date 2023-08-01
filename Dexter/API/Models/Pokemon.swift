@@ -7,8 +7,6 @@
 
 import Foundation
 
-// MARK: Pokemon endpoint
-
 struct PkmnPokemon: Codable, Identifiable {
     var id: Int
     var name: String
@@ -19,7 +17,7 @@ struct PkmnPokemon: Codable, Identifiable {
     var weight: Int?
     var abilities: [PkmnPokemonAbility]?
     var forms: [PkmnNamedAPIResource]?
-//    var gameIndices: [Any]?
+//    var gameIndices: [PkmnVersionGameIndex]?
     var heldItems: [PkmnPokemonHeldItem]?
     var locationAreaEncounters: String?
     var moves: [PkmnPokemonMove]?
@@ -88,8 +86,6 @@ struct PkmnPokemonSprites: Codable {
     var backFemale: String?
     var backShinyFemale: String?
 }
-
-// MARK: Pokemon Species endpoint
 
 struct PkmnPokemonSpecies: Codable, Identifiable, Nameable {
     var id: Int

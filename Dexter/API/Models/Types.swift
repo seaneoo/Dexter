@@ -38,6 +38,11 @@ enum PkmnTypeColors: String, CaseIterable {
 struct PkmnType: Codable, Identifiable, Nameable {
     var id: Int
     var name: String
+    var damageRelations: PkmnTypeRelations
+    var pastDamageRelations: [PkmnTypeRelationsPast]
+//    var gameIndices: [PkmnGenerationGameIndex]
+    var generation: PkmnNamedAPIResource
+    var moveDamageClass: PkmnNamedAPIResource
     var names: [PkmnName]
     var pokemon: [PkmnTypePokemon]
     var moves: [PkmnNamedAPIResource]
